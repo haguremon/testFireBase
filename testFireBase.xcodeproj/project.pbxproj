@@ -33,6 +33,7 @@
 		CF2BFDF2270C34A9006EFFAB /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF1270C34A9006EFFAB /* SearchResultViewController.swift */; };
 		CF2BFDF4270C3518006EFFAB /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF3270C3518006EFFAB /* PostEditorViewController.swift */; };
 		CF2BFDF6270C3594006EFFAB /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF5270C3594006EFFAB /* PublishPostViewController.swift */; };
+		CF2BFDF8270EBE58006EFFAB /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */; };
 		E018B1674ED841A743E76520 /* Pods_testFireBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8DFF2B3387FC372177C90 /* Pods_testFireBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		CF2BFDF1270C34A9006EFFAB /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		CF2BFDF3270C3518006EFFAB /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		CF2BFDF5270C3594006EFFAB /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		DEC0E66B157A07838B589CAB /* Pods-testFireBase-testFireBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase-testFireBaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-testFireBase-testFireBaseUITests/Pods-testFireBase-testFireBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 			children = (
 				CF2BFDA0270C293B006EFFAB /* AppDelegate.swift */,
 				CF2BFDA2270C293B006EFFAB /* SceneDelegate.swift */,
+				CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				CF2BFDDF270C31FE006EFFAB /* NotificationViewController.swift in Sources */,
 				CF2BFDE7270C33A1006EFFAB /* PostViewController.swift in Sources */,
 				CF2BFDF4270C3518006EFFAB /* PostEditorViewController.swift in Sources */,
+				CF2BFDF8270EBE58006EFFAB /* DataBaseManager.swift in Sources */,
 				CF2BFDE3270C330F006EFFAB /* LoginViewController.swift in Sources */,
 				CF2BFDA3270C293B006EFFAB /* SceneDelegate.swift in Sources */,
 				CF2BFDF2270C34A9006EFFAB /* SearchResultViewController.swift in Sources */,
