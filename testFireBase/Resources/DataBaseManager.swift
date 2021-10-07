@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import FirebaseDatabase
+
+public class DataBaseManager {
+    
+    static let shared = DataBaseManager()
+    
+}
