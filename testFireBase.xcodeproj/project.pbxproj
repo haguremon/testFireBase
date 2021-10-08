@@ -37,6 +37,7 @@
 		CF2BFDF8270EBE58006EFFAB /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */; };
 		CF2BFEA8270FEECA006EFFAB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */; };
 		CF2BFEAA270FEF3C006EFFAB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */; };
+		CF2BFEAC270FF924006EFFAB /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFEAB270FF924006EFFAB /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		CF2BFEA6270FEAB3006EFFAB /* testFireBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testFireBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CF2BFEAB270FF924006EFFAB /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		E2A544BCBD5FA07DED88AFC6 /* Pods-testFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase.release.xcconfig"; path = "Target Support Files/Pods-testFireBase/Pods-testFireBase.release.xcconfig"; sourceTree = "<group>"; };
 		ED8EAAE6F4CE03001B7B56C7 /* Pods_testFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ED56DE2A7932D1B4E08163 /* Pods-testFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase.debug.xcconfig"; path = "Target Support Files/Pods-testFireBase/Pods-testFireBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */,
 				CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */,
 				CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */,
+				CF2BFEAB270FF924006EFFAB /* extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				CF2BFDDB270C3186006EFFAB /* ProFileViewController.swift in Sources */,
 				CF2BFEA8270FEECA006EFFAB /* AuthManager.swift in Sources */,
 				CF2BFDE5270C331C006EFFAB /* RegisterViewController.swift in Sources */,
+				CF2BFEAC270FF924006EFFAB /* extensions.swift in Sources */,
 				CF2BFDDD270C31B3006EFFAB /* CameraViewController.swift in Sources */,
 				CF2BFDEE270C342E006EFFAB /* ListViewController.swift in Sources */,
 				CF2BFDEC270C3408006EFFAB /* SettingViewController.swift in Sources */,

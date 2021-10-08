@@ -10,12 +10,20 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    private let nameTextField: UITextField = {
+    private let nameEmailTextField: UITextField = {
         let textField = UITextField()
-        return textField
-    }()
-    private let emailTextField: UITextField = {
-        let textField = UITextField()
+        textField.placeholder = "name or nemail..."
+        textField.returnKeyType = .next
+        textField.leftViewMode = .always
+        textField.leftView = UIView(frame: .init(x: 0,
+                                                 y: 0,
+                                                 width: 10,
+                                                 height: 0))
+        //autoで設定
+        textField.autocapitalizationType = .none
+        //最初の文字が小文字になる
+        textField.autocorrectionType = .no
+      
         return textField
     }()
    
@@ -49,15 +57,20 @@ class LoginViewController: UIViewController {
         addSubviews()
         view.backgroundColor = .systemBackground
     }
+    
+    //MRAK: - frameの設定
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-    //ここでフレームとか色々と設定する
+       
+        headerView.frame = CGRect(x: 0,
+                                  y: view.safeAreaInsets.top,
+                                  width: view.width,
+                                  height: 50)
     }
     
     private func addSubviews() {
         
-        view.addSubview(nameTextField)
-        view.addSubview(emailTextField)
+        view.addSubview(nameEmailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
         view.addSubview(termsButton)
@@ -74,3 +87,4 @@ class LoginViewController: UIViewController {
   
 
 }
+
