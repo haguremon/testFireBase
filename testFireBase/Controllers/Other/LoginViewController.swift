@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
         textField.layer.cornerRadius = Constats.cornerRadius
        
         textField.backgroundColor = .secondarySystemBackground
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.secondaryLabel.cgColor
         return textField
     }()
    
@@ -40,7 +42,7 @@ class LoginViewController: UIViewController {
         //パスワードをする時に伏せ字になる
         textField.isSecureTextEntry = true
         textField.placeholder = "Password..."
-        textField.returnKeyType = .next
+        textField.returnKeyType = .done
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0,
                                                  y: 0,
@@ -56,7 +58,8 @@ class LoginViewController: UIViewController {
         textField.layer.cornerRadius = Constats.cornerRadius
         
         textField.backgroundColor = .secondarySystemBackground
-
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.secondaryLabel.cgColor
         return textField
     }()
     
@@ -81,11 +84,25 @@ class LoginViewController: UIViewController {
     }()
    //利用規約ボタン
     private let termsButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        button.setTitle("terms of serived", for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constats.cornerRadius
+    
+        return button
     }()
     //プライバシーの規約ボタン
     private let privacyButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        button.setTitle("privasy policy", for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constats.cornerRadius
+    
+        return button
     }()
     private let  headerView: UIView = {
         let header = UIView()
@@ -97,10 +114,16 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.addTarget(self, action: #selector(didtapLoginButton), for: .touchUpInside)
+        createAcconutButton.addTarget(self, action: #selector(didtapCreateAcconut), for: .touchUpInside)
+        termsButton.addTarget(self, action: #selector(didtapTermsButton), for: .touchUpInside)
+        privacyButton.addTarget(self, action: #selector(didtapPrivacyButton), for: .touchUpInside)
+
         nameEmailTextField.delegate = self
         passwordTextField.delegate = self
         addSubviews()
         view.backgroundColor = .systemBackground
+     
     }
     
     //MRAK: - frameの設定
@@ -129,6 +152,14 @@ class LoginViewController: UIViewController {
                                           y: loginButton.bottom + 10,
                                   width: view.width - 50,
                                   height: 53)
+        termsButton.frame = CGRect(x: 10,
+                                   y: view.height - view.safeAreaInsets.bottom - 100,
+                                  width: view.width - 20,
+                                  height: 53)
+        privacyButton.frame = CGRect(x: 10,
+                                    y: view.height - view.safeAreaInsets.bottom - 50,
+                                   width: view.width - 20,
+                                   height: 53)
         
         
         
@@ -169,7 +200,10 @@ class LoginViewController: UIViewController {
     
     
     
-    @objc private func didtapLoginButton(){}
+    @objc private func didtapLoginButton(){
+        
+        print("test")
+    }
     @objc private func didtapTermsButton(){}
     @objc private func didtapPrivacyButton(){}
     @objc private func didtapCreateAcconut(){}
@@ -179,9 +213,17 @@ class LoginViewController: UIViewController {
 
 //MRAK: -UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
+    
     //UITextFieldDelegateを使ってユーザーの入力を認知する
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-       
+        if textField == nameEmailTextField {
+            //nameEmailTextFieldでリターンが押された時にpasswordTextFieldのキーボードを開く
+            passwordTextField.becomeFirstResponder()
+        } else if textField ==  passwordTextField {
+            //textFieldが押されたらログインボタンが起動する
+            didtapLoginButton()
+            
+        }
         
         return true
     }
