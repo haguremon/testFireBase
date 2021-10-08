@@ -9,10 +9,37 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
+    struct Constats {
+        static let cornerRadius: CGFloat = 8.0
+    }
     
     private let nameEmailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "name or nemail..."
+        textField.returnKeyType = .continue
+        textField.leftViewMode = .always
+        textField.leftView = UIView(frame: .init(x: 0,
+                                                 y: 0,
+                                                 width: 10,
+                                                 height: 0))
+        //autoで設定
+        textField.autocapitalizationType = .none
+        //最初の文字が小文字になる
+        textField.autocorrectionType = .no
+        //　masksToBoundsについてhttps://zenn.dev/toshi36/scraps/28798705d6a9c7
+        textField.layer.masksToBounds = true
+        //丸くする
+        textField.layer.cornerRadius = Constats.cornerRadius
+       
+        textField.backgroundColor = .secondarySystemBackground
+        return textField
+    }()
+   
+    private let passwordTextField: UITextField = {
+        let textField = UITextField()
+        //パスワードをする時に伏せ字になる
+        textField.isSecureTextEntry = true
+        textField.placeholder = "Password..."
         textField.returnKeyType = .next
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0,
@@ -23,22 +50,34 @@ class LoginViewController: UIViewController {
         textField.autocapitalizationType = .none
         //最初の文字が小文字になる
         textField.autocorrectionType = .no
-      
-        return textField
-    }()
-   
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        //パスワードをする時に伏せ字になる
-        textField.isSecureTextEntry = true
+        //　masksToBoundsについてhttps://zenn.dev/toshi36/scraps/28798705d6a9c7
+        textField.layer.masksToBounds = true
+        //丸くする
+        textField.layer.cornerRadius = Constats.cornerRadius
+        
+        textField.backgroundColor = .secondarySystemBackground
+
         return textField
     }()
     
     private let loginButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        button.setTitle("Log In", for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constats.cornerRadius
+        button.backgroundColor = .systemBlue
+        button.setTitleColor(.white, for: .normal)
+        return button
     }()
-    private let createAcconut: UIButton = {
-        return UIButton()
+    private let createAcconutButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitleColor(.label, for: .normal)
+        button.setTitle("Create New Acconut?", for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constats.cornerRadius
+    
+        return button
     }()
    //利用規約ボタン
     private let termsButton: UIButton = {
@@ -49,11 +88,17 @@ class LoginViewController: UIViewController {
         return UIButton()
     }()
     private let  headerView: UIView = {
-        return UIView()
+        let header = UIView()
+        header.clipsToBounds = true
+        header.backgroundColor = .systemBlue
+        let backgroudColorImage = UIImageView(image: UIImage(named: "instagramheader"))
+        header.addSubview(backgroudColorImage)
+        return header
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameEmailTextField.delegate = self
+        passwordTextField.delegate = self
         addSubviews()
         view.backgroundColor = .systemBackground
     }
@@ -63,10 +108,52 @@ class LoginViewController: UIViewController {
         super.viewDidLayoutSubviews()
        
         headerView.frame = CGRect(x: 0,
-                                  y: view.safeAreaInsets.top,
+                                  y: 0,
                                   width: view.width,
-                                  height: 50)
+                                  height: view.height / 3)
+    configuraHeaderView()
+        
+        nameEmailTextField.frame = CGRect(x: 25,
+                                          y: headerView.bottom + 10,
+                                  width: view.width - 50,
+                                  height: 53)
+        passwordTextField.frame = CGRect(x: 25,
+                                          y: nameEmailTextField.bottom + 10,
+                                  width: view.width - 50,
+                                  height: 53)
+        loginButton.frame = CGRect(x: 25,
+                                          y: passwordTextField.bottom + 10,
+                                  width: view.width - 50,
+                                  height: 53)
+        createAcconutButton.frame = CGRect(x: 25,
+                                          y: loginButton.bottom + 10,
+                                  width: view.width - 50,
+                                  height: 53)
+        
+        
+        
     }
+   //MRAK: - Headerのイメージに関する設定
+    private func configuraHeaderView(){
+       
+        //subviewsするカウントは1
+        guard headerView.subviews.count == 1 else { return }
+        guard let backgroudColorImage = headerView.subviews.first  else {
+            return
+        }
+        backgroudColorImage.frame = headerView.bounds
+     //logoの設定
+        let logoImageView = UIImageView(image: UIImage(named: "logo"))
+        headerView.addSubview(logoImageView)
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.frame = CGRect(x: headerView.width / 4,
+                                     y: view.safeAreaInsets.top,
+                                     width: headerView.width / 2,
+                                     height: headerView.height - view.safeAreaInsets.top)
+
+        
+    }
+    
     
     private func addSubviews() {
         
@@ -75,10 +162,12 @@ class LoginViewController: UIViewController {
         view.addSubview(loginButton)
         view.addSubview(termsButton)
         view.addSubview(privacyButton)
-        view.addSubview(createAcconut)
+        view.addSubview(createAcconutButton)
         view.addSubview(headerView)
         
     }
+    
+    
     
     @objc private func didtapLoginButton(){}
     @objc private func didtapTermsButton(){}
@@ -86,5 +175,15 @@ class LoginViewController: UIViewController {
     @objc private func didtapCreateAcconut(){}
   
 
+}
+
+//MRAK: -UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    //UITextFieldDelegateを使ってユーザーの入力を認知する
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+        
+        return true
+    }
 }
 

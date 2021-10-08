@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseDatabase
+
 //MRAK: -Realtime Database　 CRUDの設定
 //テストをする時はこちらでやれば楽勝
 public class DataBaseManager {

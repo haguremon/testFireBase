@@ -21,7 +21,7 @@ extension UIView {
     public var top: CGFloat {
         return frame.origin.y
     }
-    public var btomm: CGFloat {
+    public var bottom: CGFloat {
         
         return frame.origin.y + frame.size.height
     
