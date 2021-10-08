@@ -35,6 +35,8 @@
 		CF2BFDF4270C3518006EFFAB /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF3270C3518006EFFAB /* PostEditorViewController.swift */; };
 		CF2BFDF6270C3594006EFFAB /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF5270C3594006EFFAB /* PublishPostViewController.swift */; };
 		CF2BFDF8270EBE58006EFFAB /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */; };
+		CF2BFEA8270FEECA006EFFAB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */; };
+		CF2BFEAA270FEF3C006EFFAB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +89,11 @@
 		CF2BFDF3270C3518006EFFAB /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		CF2BFDF5270C3594006EFFAB /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
 		CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
-		CF2BFDF9270EC224006EFFAB /* testFireBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testFireBaseTests.xctest; path = "/Users/iwasakiyuuta/Desktop/Release App/testFireBase/build/Debug-iphoneos/testFireBaseTests.xctest"; sourceTree = "<absolute>"; };
-		CF2BFDFA270EC224006EFFAB /* testFireBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testFireBaseUITests.xctest; path = "/Users/iwasakiyuuta/Desktop/Release App/testFireBase/build/Debug-iphoneos/testFireBaseUITests.xctest"; sourceTree = "<absolute>"; };
-		CF2BFDFB270EC224006EFFAB /* testFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = testFireBase.app; path = "/Users/iwasakiyuuta/Desktop/Release App/testFireBase/build/Debug-iphoneos/testFireBase.app"; sourceTree = "<absolute>"; };
+		CF2BFEA4270FEAB3006EFFAB /* testFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2BFEA5270FEAB3006EFFAB /* testFireBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testFireBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2BFEA6270FEAB3006EFFAB /* testFireBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testFireBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		E2A544BCBD5FA07DED88AFC6 /* Pods-testFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase.release.xcconfig"; path = "Target Support Files/Pods-testFireBase/Pods-testFireBase.release.xcconfig"; sourceTree = "<group>"; };
 		ED8EAAE6F4CE03001B7B56C7 /* Pods_testFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ED56DE2A7932D1B4E08163 /* Pods-testFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase.debug.xcconfig"; path = "Target Support Files/Pods-testFireBase/Pods-testFireBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +147,6 @@
 				5B1FDD449CA760492AE5FABE /* Pods-testFireBaseTests.debug.xcconfig */,
 				60661CC6946D1F7B8519BC99 /* Pods-testFireBaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +159,9 @@
 				CF2BFDC0270C293D006EFFAB /* testFireBaseUITests */,
 				7E52152AC108011DDE642B4C /* Pods */,
 				518B30A0EB2A13C6EE8B509B /* Frameworks */,
+				CF2BFEA4270FEAB3006EFFAB /* testFireBase.app */,
+				CF2BFEA5270FEAB3006EFFAB /* testFireBaseTests.xctest */,
+				CF2BFEA6270FEAB3006EFFAB /* testFireBaseUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +233,8 @@
 				CF2BFDA0270C293B006EFFAB /* AppDelegate.swift */,
 				CF2BFDA2270C293B006EFFAB /* SceneDelegate.swift */,
 				CF2BFDF7270EBE58006EFFAB /* DataBaseManager.swift */,
+				CF2BFEA7270FEECA006EFFAB /* AuthManager.swift */,
+				CF2BFEA9270FEF3C006EFFAB /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,7 +296,7 @@
 			);
 			name = testFireBase;
 			productName = testFireBase;
-			productReference = CF2BFDFB270EC224006EFFAB /* testFireBase.app */;
+			productReference = CF2BFEA4270FEAB3006EFFAB /* testFireBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CF2BFDB2270C293D006EFFAB /* testFireBaseTests */ = {
@@ -307,7 +315,7 @@
 			);
 			name = testFireBaseTests;
 			productName = testFireBaseTests;
-			productReference = CF2BFDF9270EC224006EFFAB /* testFireBaseTests.xctest */;
+			productReference = CF2BFEA5270FEAB3006EFFAB /* testFireBaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CF2BFDBC270C293D006EFFAB /* testFireBaseUITests */ = {
@@ -327,7 +335,7 @@
 			);
 			name = testFireBaseUITests;
 			productName = testFireBaseUITests;
-			productReference = CF2BFDFA270EC224006EFFAB /* testFireBaseUITests.xctest */;
+			productReference = CF2BFEA6270FEAB3006EFFAB /* testFireBaseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -514,6 +522,7 @@
 				CF2BFDF6270C3594006EFFAB /* PublishPostViewController.swift in Sources */,
 				CF2BFDA1270C293B006EFFAB /* AppDelegate.swift in Sources */,
 				CF2BFDDF270C31FE006EFFAB /* NotificationViewController.swift in Sources */,
+				CF2BFEAA270FEF3C006EFFAB /* StorageManager.swift in Sources */,
 				CF2BFDE7270C33A1006EFFAB /* PostViewController.swift in Sources */,
 				CF2BFDF4270C3518006EFFAB /* PostEditorViewController.swift in Sources */,
 				CF2BFDF8270EBE58006EFFAB /* DataBaseManager.swift in Sources */,
@@ -523,6 +532,7 @@
 				CF2BFDE9270C33E7006EFFAB /* EditPrlFileViewController.swift in Sources */,
 				CF2BFDF0270C3458006EFFAB /* SearchViewController.swift in Sources */,
 				CF2BFDDB270C3186006EFFAB /* ProFileViewController.swift in Sources */,
+				CF2BFEA8270FEECA006EFFAB /* AuthManager.swift in Sources */,
 				CF2BFDE5270C331C006EFFAB /* RegisterViewController.swift in Sources */,
 				CF2BFDDD270C31B3006EFFAB /* CameraViewController.swift in Sources */,
 				CF2BFDEE270C342E006EFFAB /* ListViewController.swift in Sources */,

@@ -1,17 +1,17 @@
 //
-//  DataBaseManager.swift
+//  StorageManager.swift
 //  testFireBase
 //
-//  Created by IwasakIYuta on 2021/10/07.
+//  Created by IwasakIYuta on 2021/10/08.
 //
-
+//
 import Foundation
-import FirebaseDatabase
-//MRAK: -Realtime Database　 CRUDの設定
-//テストをする時はこちらでやれば楽勝
-public class DataBaseManager {
+import FirebaseStorage
+
+//MRAK: -StorageのCRUD
+public class StorageManager {
     
-    static let shared = DataBaseManager()
+    static let shared = StorageManager()
     
     //MRAK: -public　でそれぞれの場合での機能
     public func registerNewUser(name: String, email: String, password: String) {
