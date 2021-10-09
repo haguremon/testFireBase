@@ -38,3 +38,11 @@ extension UIView {
     
     
 }
+
+extension String {
+    func safeDatabaseKey() -> String {
+        //replacingOccurrencesde:で文字を変更する
+        //of:変更前 , with:変更後
+        return self.replacingOccurrences(of: ".", with: "-").replacingOccurrences(of: "@", with: "-")
+    }
+}

@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     private let nameEmailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "name or nemail..."
+        textField.placeholder = "name or email..."
         textField.returnKeyType = .next
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0,
@@ -31,9 +31,15 @@ class LoginViewController: UIViewController {
         //丸くする
         textField.layer.cornerRadius = Constats.cornerRadius
         
+        
+        
         textField.backgroundColor = .secondarySystemBackground
+        
         textField.layer.borderWidth = 1
+
         textField.layer.borderColor = UIColor.secondaryLabel.cgColor
+
+        
         return textField
     }()
     
@@ -42,6 +48,7 @@ class LoginViewController: UIViewController {
         //パスワードをする時に伏せ字になる
         textField.isSecureTextEntry = true
         textField.placeholder = "Password..."
+        textField.textContentType = .newPassword
         textField.returnKeyType = .continue
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0,
@@ -114,19 +121,19 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.addTarget(self, action: #selector(didtapLoginButton), for: .touchUpInside)
-        createAcconutButton.addTarget(self, action: #selector(didtapCreateAcconut), for: .touchUpInside)
-        termsButton.addTarget(self, action: #selector(didtapTermsButton), for: .touchUpInside)
-        privacyButton.addTarget(self, action: #selector(didtapPrivacyButton), for: .touchUpInside)
+      
+        addTargets()
         
         nameEmailTextField.delegate = self
         passwordTextField.delegate = self
         addSubviews()
+        
         view.backgroundColor = .systemBackground
         
     }
+
     
-    //MRAK: - frameの設定
+    //MRAK: - frameと場所の設定
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -197,7 +204,14 @@ class LoginViewController: UIViewController {
         view.addSubview(headerView)
         
     }
-    
+    private func addTargets() {
+       
+        loginButton.addTarget(self, action: #selector(didtapLoginButton), for: .touchUpInside)
+        createAcconutButton.addTarget(self, action: #selector(didtapCreateAcconut), for: .touchUpInside)
+        termsButton.addTarget(self, action: #selector(didtapTermsButton), for: .touchUpInside)
+        privacyButton.addTarget(self, action: #selector(didtapPrivacyButton), for: .touchUpInside)
+        
+    }
     
     
     @objc private func didtapLoginButton(){
@@ -209,34 +223,34 @@ class LoginViewController: UIViewController {
               let password = passwordTextField.text, !password.isEmpty, password.count >= 8 else {
                   return
               }
-//        var username: String?
-//        var email: String?
-//
-//        if usernameEmail.contains("@"), usernameEmail.contains(".") {
-//            // Email
-//            email = usernameEmail
-//        } else {
-//            // Username
-//            username = usernameEmail
-//        }
-//
-//        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
-//            DispatchQueue.main.async {
-//                if success {
-//                    // User logged in
-//                    self.dismiss(animated: true, completion: nil)
-//                } else {
-//                    // Error occurred
-//                    let alert = UIAlertController(title: "Log In Error",
-//                                                  message: "We were unable to log you in.",
-//                                                  preferredStyle: .alert)
-//                    alert.addAction(UIAlertAction(title: "Dismiss",
-//                                                  style: .cancel,
-//                                                  handler: nil))
-//                    self.present(alert, animated: true)
-//                }
-//            }
-//        }
+        var username: String?
+        var email: String?
+
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            // Email
+            email = usernameEmail
+        } else {
+            // Username
+            username = usernameEmail
+        }
+
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    // User logged in
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    // Error occurred
+                    let alert = UIAlertController(title: "Log In Error",
+                                                  message: "We were unable to log you in.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss",
+                                                  style: .cancel,
+                                                  handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
     }
     
     
