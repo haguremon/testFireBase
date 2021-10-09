@@ -18,7 +18,7 @@ public class StorageManager {
         
     }
     
-    public func loginUser(name: String?, email: String?, passwore: String) {
+    public func loginUser(username: String?, email: String?, passwore: String) {
         
     }
     
