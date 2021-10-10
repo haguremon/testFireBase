@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="-2246" y="960"/>
         </scene>
-        <!--Notification View Controller-->
+        <!--Notifications View Controller-->
         <scene sceneID="qZq-kT-P6y">
             <objects>
-                <viewController id="YSz-18-8ca" customClass="NotificationViewController" customModule="testFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YSz-18-8ca" customClass="NotificationsViewController" customModule="testFireBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yeU-Nw-Csh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

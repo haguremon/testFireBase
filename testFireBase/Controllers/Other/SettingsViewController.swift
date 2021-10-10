@@ -94,7 +94,7 @@ final class SettingsViewController: UIViewController {
             }
             
         }))
-        //下をしないとエラーが出るらしい
+        //下をしないとエラーが出るらしい 別にエラーは出ないけど？
         actionSheet.popoverPresentationController?.sourceView = tableView
         actionSheet.popoverPresentationController?.sourceRect = tableView.bounds
         present(actionSheet, animated: true, completion: nil)
