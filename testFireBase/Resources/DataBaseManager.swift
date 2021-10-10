@@ -27,7 +27,7 @@ public class DataBaseManager {
            completion(true)
        }
     
-    /// 新しいユーザーデータをデータベースに挿入する
+    /// 新しいユーザーデータをRealtime Databaseに挿入する
     /// - Parameters
     ///     - email: String representing email
     ///     - username: String representing username

@@ -28,7 +28,7 @@
 		CF2BFDE5270C331C006EFFAB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDE4270C331C006EFFAB /* RegisterViewController.swift */; };
 		CF2BFDE7270C33A1006EFFAB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDE6270C33A0006EFFAB /* PostViewController.swift */; };
 		CF2BFDE9270C33E7006EFFAB /* EditPrlFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDE8270C33E7006EFFAB /* EditPrlFileViewController.swift */; };
-		CF2BFDEC270C3408006EFFAB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDEB270C3408006EFFAB /* SettingViewController.swift */; };
+		CF2BFDEC270C3408006EFFAB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDEB270C3408006EFFAB /* SettingsViewController.swift */; };
 		CF2BFDEE270C342E006EFFAB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDED270C342D006EFFAB /* ListViewController.swift */; };
 		CF2BFDF0270C3458006EFFAB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDEF270C3458006EFFAB /* SearchViewController.swift */; };
 		CF2BFDF2270C34A9006EFFAB /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BFDF1270C34A9006EFFAB /* SearchResultViewController.swift */; };
@@ -83,7 +83,7 @@
 		CF2BFDE4270C331C006EFFAB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CF2BFDE6270C33A0006EFFAB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CF2BFDE8270C33E7006EFFAB /* EditPrlFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPrlFileViewController.swift; sourceTree = "<group>"; };
-		CF2BFDEB270C3408006EFFAB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CF2BFDEB270C3408006EFFAB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CF2BFDED270C342D006EFFAB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		CF2BFDEF270C3458006EFFAB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF2BFDF1270C34A9006EFFAB /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +216,7 @@
 		CF2BFDD4270C2E5C006EFFAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF2BFEAD2712BE05006EFFAB /* Onboarding */,
 				CF2BFDE1270C32F8006EFFAB /* Other */,
 				CF2BFDE0270C3265006EFFAB /* Core Tabs */,
 			);
@@ -256,9 +257,9 @@
 			children = (
 				CF2BFDA4270C293B006EFFAB /* HomeViewController.swift */,
 				CF2BFDD8270C3145006EFFAB /* ExploreViewController.swift */,
-				CF2BFDDA270C3186006EFFAB /* ProFileViewController.swift */,
 				CF2BFDDC270C31B3006EFFAB /* CameraViewController.swift */,
 				CF2BFDDE270C31FE006EFFAB /* NotificationViewController.swift */,
+				CF2BFDDA270C3186006EFFAB /* ProFileViewController.swift */,
 			);
 			path = "Core Tabs";
 			sourceTree = "<group>";
@@ -266,11 +267,9 @@
 		CF2BFDE1270C32F8006EFFAB /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				CF2BFDE2270C330F006EFFAB /* LoginViewController.swift */,
-				CF2BFDE4270C331C006EFFAB /* RegisterViewController.swift */,
+				CF2BFDEB270C3408006EFFAB /* SettingsViewController.swift */,
 				CF2BFDE6270C33A0006EFFAB /* PostViewController.swift */,
 				CF2BFDE8270C33E7006EFFAB /* EditPrlFileViewController.swift */,
-				CF2BFDEB270C3408006EFFAB /* SettingViewController.swift */,
 				CF2BFDED270C342D006EFFAB /* ListViewController.swift */,
 				CF2BFDEF270C3458006EFFAB /* SearchViewController.swift */,
 				CF2BFDF1270C34A9006EFFAB /* SearchResultViewController.swift */,
@@ -278,6 +277,15 @@
 				CF2BFDF5270C3594006EFFAB /* PublishPostViewController.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		CF2BFEAD2712BE05006EFFAB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CF2BFDE2270C330F006EFFAB /* LoginViewController.swift */,
+				CF2BFDE4270C331C006EFFAB /* RegisterViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,7 +548,7 @@
 				CF2BFEAC270FF924006EFFAB /* extensions.swift in Sources */,
 				CF2BFDDD270C31B3006EFFAB /* CameraViewController.swift in Sources */,
 				CF2BFDEE270C342E006EFFAB /* ListViewController.swift in Sources */,
-				CF2BFDEC270C3408006EFFAB /* SettingViewController.swift in Sources */,
+				CF2BFDEC270C3408006EFFAB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ public class AuthManager {
         
         DataBaseManager.shared.canCreateNewUser(with: email, username: username) { canCreate in
             if canCreate {
-                /*
+                /*//作成可能のデータだった場合作る
                  - Create account
                  - Insert account to database
                  */
