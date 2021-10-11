@@ -3,7 +3,7 @@
 //  testFireBase
 //
 //  Created by IwasakIYuta on 2021/10/05.
-//
+//test
 
 import SafariServices //インスタグラムにアクセスするのでSafariServicesを開くためにインポート
 import UIKit
